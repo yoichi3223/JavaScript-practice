@@ -21,8 +21,21 @@ console.log(`管理をしっかりして${practice}まで頑張ります。`)
 const name1 = new Human("洋一",29,"サッカー");
 name1.introduce();
 
+class HumanNew extends Human{
 
+}
+const name2 = new HumanNew("洋一2",29,"ランニング");
+name2.introduce();
 
+const food = {
+
+  name:"カレー",
+  price:500,
+  introduce:()=>{
+    console.log("カレーです")
+  }
+}
+food.introduce();
 
 // // const names = [
 // //   {name:"洋一",age:29,breed:"B"},
