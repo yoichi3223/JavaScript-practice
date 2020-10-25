@@ -1,63 +1,124 @@
-// // class Yoichi{
-// //   constructor(name,age){
-// //     this.name = name
-// //     this.age = age
-// //   }
-// //   info(){
-// //     console.log("こんにちは")
-// //     console.log(chalk.yellow(`名前は${this.name}といいます`));
-// //     return this.age * 8
-// //   }
-// //   hi(){
-// //     console.log("あああ")
-// //   }
+class Human{
 
-// // }
-// // const yoichi = new Yoichi("洋一",8);
-// // const yoichiage = yoichi.info();
-// // console.log(yoichiage);
+  constructor(name,age,sports){
+this.name = name
+this.age = age
+this.sports = sports
+  }
 
-// const foods = [
-// {name:"カレー",price:700}, //0
-// {name:"ナポリタン",price:500}, //1
-// {name:"ラザニア",price:900}, //2 
-// {name:"すきやき",price:800} //3
-// ];
+  introduce(){
+console.log(`私の名前は${this.name}です`);
+console.log(`${this.age}歳です`);
+console.log(`好きなスポーツは${this.sports}です`);
+const practice = this.info();
+console.log(`管理をしっかりして${practice}まで頑張ります。`)
+}
 
-// const finalFood =  foods.filter((food)=>{
-// return food.price >= 700 || food.name === "ナポリタン";
-// });
-// console.log(finalFood);
+ info(){
+ return this.age * 1.3;
+ }
+}
+const name1 = new Human("洋一",29,"サッカー");
+name1.introduce();
 
-// // console.log(foods[1].name);
-// //for文
 
-// for(let i = 0;i < foods.length;i++){
-//   const food = foods[i];
-//   // console.log(food.name);
-//   // console.log(food.price);
-//   if(food.price >600 || food.name === "ナポリタン"){
-//     console.log(food.name);
-//     console.log(food.price);
+
+
+// // const names = [
+// //   {name:"洋一",age:29,breed:"B"},
+// //   {name:"なつみ",age:28,breed:"O"},
+// // {name:"宏子",age:67,breed:"AB"}
+// // ];
+
+// // const namae = names.filter((name)=>{return name.age > 29;});
+// // console.log(namae);
+
+// // const block = names.map((name)=>{return name.name + name.breed;});
+// // console.log(block);
+// class Food{
+//   constructor(name,price,number){
+//     this.name = name
+//     this.price = price
+//     this.number = number
+//   }
+//   introduce(){
+//     console.log("いらっしゃいませ")
+//     console.log(`ご注文は${this.name}となります`);
+//     console.log(`一つ当たりの値段は${this.price}円となります`);
+//     const total_price = this.hi();
+//     console.log(`合計金額は${total_price}円です`);
+//     }
+//     // console.log(`合計の値段は${this.price　* this.number}となります`);
+  
+//   hi(){
+//     return this.number * this.price;
 //   }
 // }
+// const food1 = new Food("カレーライス",700,3);
+// const food2 = new Food("ナポリタン",800,6);
+// const food3 = new Food("パンケーキ",600,8);
+// const food4 = new Food("ラザニア",400,3);
+// const food5 = new Food("餃子定食",500,5);
+// food1.introduce();
+// food2.introduce();
+// food3.introduce();
+// food4.introduce();
+// food5.introduce();
 
-// const humans = ["太郎","花子"];
+// for(let i = 1; i <=100;i++){
+//   console.log(i);
+// }
 
-// humans.forEach((human)=>{
-// console.log(`${human}です`);
+//10/20
+
+// const yoichi = ()=>{
+//   console.log("名前は洋一です");
+// }
+
+// const introduce = (callback)=>{
+//   console.log("こんにちは");
+//   callback("今日もファイト");
+// }
+
+// introduce((ganbaru)=>{
+//   console.log(ganbaru);
 // });
 
-// humans.push("二郎");
-// console.log(humans);
+//push method
+// foods = ["カレーライス","パスタ","ラーメン"];
+// console.log(foods);
+// foods.push("ほうとう")
+// console.log(foods);
+//forEach method
+// foods = ["カレーライス","パスタ","ラーメン"];
+// foods.forEach((food)=>{console.log(food)});
 
-// const numbers = [1,2,3,4,5,6,7,8,9,10];
-// const finalNumber = numbers.map((number)=>{
-//   return number * 3 * 3 * 3.14;
+
+//Callback
+// const introduce =(callback)=>{
+// callback("洋一",29);
+// };
+
+// introduce((name,age)=>{
+// console.log(`こんにちは${name}です`);
+// console.log(`こんにちは${age * 3}です`);
 // });
-// console.log(finalNumber);
 
-const check = (number)=>{
-return number % 2===0;
-}
-console.log(check(6));
+//callback2
+
+// const name = ()=>{
+//   console.log("洋一");
+//   return 8 * 9;
+// }
+
+// const introduce = (callback)=>{
+//   console.log("はじめまして");
+//   callback("洋一",29,"福島","成功");
+
+// }
+
+// introduce(name);
+
+// introduce((name,age,prefectures,succes)=>{
+//   console.log(`名前は${name}です、${age}歳で${prefectures}出身です,将来は${succes}します`);
+// })
