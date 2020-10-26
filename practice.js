@@ -23,19 +23,22 @@ name1.introduce();
 
 class HumanNew extends Human{
 
-}
-const name2 = new HumanNew("洋一2",29,"ランニング");
-name2.introduce();
-
-const food = {
-
-  name:"カレー",
-  price:500,
-  introduce:()=>{
-    console.log("カレーです")
+  constructor(name,age,sports,bloodtype){
+    super(name,age,sports);
+    this.bloodtype　= bloodtype;
   }
+  introduce(){
+console.log(`私の名前は${this.name}です`);
+console.log(`${this.age}歳です`);
+console.log(`好きなスポーツは${this.sports}です`);
+const practice = this.info();
+console.log(`管理をしっかりして${practice}まで頑張ります。`)
+console.log(`血液型は${this.bloodtype}です`)
 }
-food.introduce();
+
+}
+const name2 = new HumanNew("洋一2",29,"ランニング","B");
+name2.introduce();
 
 // // const names = [
 // //   {name:"洋一",age:29,breed:"B"},
