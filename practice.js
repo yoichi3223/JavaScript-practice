@@ -18,15 +18,16 @@ console.log(`管理をしっかりして${practice}まで頑張ります。`)
  return this.age * 1.3;
  }
 }
+
 const name1 = new Human("洋一",29,"サッカー");
 name1.introduce();
 
 class HumanNew extends Human{
-
   constructor(name,age,sports,bloodtype){
     super(name,age,sports);
-    this.bloodtype　= bloodtype;
+    this.bloodtype　= bloodtype
   }
+
   introduce(){
 console.log(`私の名前は${this.name}です`);
 console.log(`${this.age}歳です`);
@@ -35,10 +36,21 @@ const practice = this.info();
 console.log(`管理をしっかりして${practice}まで頑張ります。`)
 console.log(`血液型は${this.bloodtype}です`)
 }
-
 }
+
 const name2 = new HumanNew("洋一2",29,"ランニング","B");
 name2.introduce();
+
+const name = (callback)=>{
+  callback("洋一",29);
+};
+
+name((name,age)=>{
+  console.log(`私の名前は${name}です。`);
+  console.log(`${age}歳です。`);
+});
+
+
 
 // // const names = [
 // //   {name:"洋一",age:29,breed:"B"},
