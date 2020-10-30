@@ -37,18 +37,18 @@ console.log(`管理をしっかりして${practice}まで頑張ります。`)
 console.log(`血液型は${this.bloodtype}です`)
 }
 }
+const aaa = "ピカチュウ";
+export default aaa;
 
-const name2 = new HumanNew("洋一2",29,"ランニング","B");
-name2.introduce();
 
-const name = (callback)=>{
-  callback("洋一",29);
-};
+// const name = (callback)=>{
+//   callback("洋一",29);
+// };
 
-name((name,age)=>{
-  console.log(`私の名前は${name}です。`);
-  console.log(`${age}歳です。`);
-});
+// name((name,age)=>{
+//   console.log(`私の名前は${name}です。`);
+//   console.log(`${age}歳です。`);
+// });
 
 
 
